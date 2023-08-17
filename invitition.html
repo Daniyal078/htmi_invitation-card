@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <title>invieition</title>
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Comfortaa:wght@300;400;500;600;700&family=Dawning+of+a+New+Day&family=Mr+De+Haviland&family=Parisienne&family=Qwitcher+Grypen:wght@400;700&family=Sacramento&display=swap");
+
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    * {
+        position: relative;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html,
+    body {
+        position: relative;
+        width: 100%;
+        overflow-x: hidden;
+        min-height: 100vh;
+    }
+
+    body {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background:gold; */
+        background: rgba(255, 217, 0, 0.39);
+    }
+
+    .card {
+        margin-bottom: 20px;
+        position: relative;
+        width: 600px;
+        height: 570px;
+        overflow: hidden;
+        color:rgb(176, 138, 41);
+        border-radius: 10px;
+        box-shadow: 0px 0px 327px -60px;
+        background: rgba(255, 217, 0, 0.11);
+    }
+
+    .top_heading {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        text-align: center;
+        text-transform: capitalize;
+        font-family: "Comfortaa", cursive;
+        padding-top: 45px;
+        width: 100%;
+    }
+
+    .top_heading div:nth-child(1),
+    .top_heading div:nth-child(3) {
+        font-size: 0.85rem;
+        font-weight: 400;
+    }
+
+    .top_heading div:nth-child(2) {
+        font-weight: 900;
+        font-size: 1.75rem;
+        margin: 0.75rem 0;
+    }
+
+    .second_heading {
+        position: absolute;
+        top: 160px;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%);
+        width: 100%;
+        font-size: 2.85rem;
+        line-height: 1;
+        font-family: "Mr De Haviland", cursive;
+    }
+
+    .center-heading div:nth-child(2) {
+        font-size: 2.5rem;
+        margin: 4px 0;
+    }
+
+    .date-and-time {
+        position: absolute;
+        bottom: 200px;
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%);
+        font-weight: 600;
+        font-family: "Comfortaa";
+        font-size: 0.75rem;
+        padding: 8px 58px;
+        white-space: nowrap;
+    }
+
+    .date-and-time::before,
+    .date-and-time::after {
+        /* content: ""; */
+        position: absolute;
+        width: 100%;
+        background: black;
+        height: 1px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 10px;
+    }
+
+    .date-and-time::before {
+        top: 1;
+    }
+
+    .date-and-time::before {
+        bottom: 0;
+    }
+
+    .time {
+        position: absolute;
+        bottom: 165px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: "Comfortaa";
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 8px 16px;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+    }
+
+    .time .bx {
+        font-size: 18px;
+    }
+
+    .time span {
+        position: relative;
+        margin-left: 8px;
+        top: 2px;
+    }
+
+    .time::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        background: black;
+        height: 1px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 10px;
+        bottom: 0;
+    }
+
+    .address {
+        position: absolute;
+        bottom: 110px;
+        left: 50%;
+        transform: translate(-50%);
+        display: flex;
+        text-align: center;
+        font-family: "comfortaa";
+        white-space: nowrap;
+    }
+
+    .contact-list {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-bottom: 36px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .contact-list .phone {
+        display: flex;
+        align-items: center;
+    }
+
+    .contact-list .phone:last-child {
+        margin-top: 6px;
+    }
+
+    .contact-list .phone .bx {
+        font-size: 22px;
+    }
+
+    .contact-list .phone span {
+        margin-left: 6px;
+        font-family: "Comfortaa", cursive;
+        font-size: 14px;
+        position: relative;
+        top: 1px;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(176, 138, 41);
+        font-weight: 400;
+    }
+    .T1dhol-image{
+        position: absolute;
+        width: 300px;
+        right: -150px;
+        object-fit: contain;
+        top: -2%;
+        transform: rotate(50deg);
+        opacity: 30%;
+    }
+    .B1dhol-image{
+        position: absolute;
+        width: 400px;
+        left: -175px;
+        object-fit: contain;
+        bottom: 10%;
+        opacity: 30%;
+        transform:scalex(-1);
+        /* transform: rotate(50deg); */
+    }
+</style>
+
+<body>
+    <div class="card">
+        <!-- <img class="T1dhol-image" src="https://cdn2.iconfinder.com/data/icons/ramadan-129/68/5-512.png" alt=""> -->
+        <img class="T1dhol-image" src="https://i.pinimg.com/originals/35/9c/72/359c726107540f3fc3d31b9271738956.png" alt="">
+        <img class="B1dhol-image" src="https://i.pinimg.com/originals/35/9c/72/359c726107540f3fc3d31b9271738956.png" alt="">
+        <div class="top_heading">
+            <div>YOU ARE INVITED TO</div>
+            <div>MAYO</div>
+            <div>CEREMONEY & CEREBRATION OF</div>
+        </div>
+        <div class="second_heading">
+            <div><span>Adina</span> &nbsp; <span>Rehmat Ali</span></div>
+            <div>&</div>
+            <div><span>Babar</span>&nbsp; <span>Hannan</span>
+            </div>
+        </div>
+        <div class="date-and-time">Sunday, 05Fabruary,2023</div>
+        <div class="time">
+            <i class="bx bx-time bx-tada"></i> <span>From 08:00</span>&nbsp;
+            &nbsp;&nbsp;<i class="bx bx-time bx-tada"></i>
+            <span>To 11:00</span>
+        </div>
+        <div class="address">
+            <i class="bx bxs-map bx-flashing"></i>&nbsp;&nbsp;
+            <span>
+                AT OUR HOME KORANGI#-6 MARKET-KARACHI
+            </span>
+        </div>
+        <div class="contact-list">
+            <div class="phone">
+                <i class="bx bx-phone bx-tada"></i>
+                <span>
+                    <a href="tel:03332377046">+923332377046</a>
+                </span>
+            </div>
+            <div class="phone">
+                <i class="bx bx-phone bx-tada"></i>
+                <span>
+                    <a href="tel:03194682961">+923194682961</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
